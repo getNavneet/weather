@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: aliceblue; */
+}
+.nav-bar{
+    width: 100%;
+    height: 80px;
+    background-color: #2db6b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+.containerr{
+    min-height: 10vh;
+    width: 60vw;
+    /* background-color: rgb(16, 201, 226); */
+    margin: 50px auto;
+    border-radius: 10px;
+    background: rgb(140, 240, 234);
+background: linear-gradient(170deg, rgba(176,191,190,1) 0%, rgba(31,177,178,0.9389005602240896) 87%);
+ box-shadow: 3px 6px 2px #888888;
+}
+.logoContiner{
+    display: block;
+    margin: auto 9px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(68, 68, 227);
+    overflow: hidden;
+    /* border: 1px solid black; */
+    /* border-radius: 50%; */
+     background: url("/logo.gif");
+    background-size: contain;
+    border: 2px solid black;
+    border-radius: 50%; 
+}
+/* .logo{
+    width: 100%;
+    height: 100%;
+    background: url("/logo.gif");
+    background-size: contain;
+    border: 2px solid black;
+    border-radius: 50%; 
+} */
+.search-box{
+    margin: 5px;
+    padding: 4px;
+    /* box-shadow: 5px 10px #888888; */
+}
+h2{
+    text-align: center;
+    margin: 25px;
+}
+.inputcity{
+    width: 80%;
+    height: 30%;
+    display: block;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    box-shadow: 2px 4px 2px #888888;
+}
+.Search-btn{
+    width: 70%;
+ height: 30px;
+    display: block;
+    margin: 2% auto;
+    font-size: 1.3rem;
+}
+.w-report{
+    text-align: center;
+    /* color: ; */
+    font-family: 'Catamaran', sans-serif;
+    line-height: 170%;
+    font-size: 1.2rem;
+}
+.tut{
+    padding: 9%;
+    line-height: 130%;
+}
+.tut p{
+    padding: 7px;
+}
+
+
+/* classes of dynammic element */
+.temp{
+    padding: 20px;
+    font-size: 3.5rem;
+}
+@media(max-width:800px) {
+    .containerr{
+        width: 90vw
+}
+.Search-btn{
+    width: 50%;
+    margin: 5% auto;
+    
+}
+.nav-bar{
+    height: 60px;
+}
+}
+.footer{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 200%;
+    /* position: absolute;
+    bottom: 0px; */
+}
+.credit{
+    text-decoration: none;
+}
+.footer a{
+    margin-top: 30px;
+    color: white;
+    
+}
