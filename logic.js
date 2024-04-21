@@ -1,8 +1,9 @@
 //object of weatherapi 
-const weatherApi = {
-    key: 'e6d57368f53cc23a651607920b96b0e9',
-    baseUrl: 'https://api.openweathermap.org/data/2.5/weather'
-}
+// const weatherApi = {
+//     key: 'e6d57368f53cc23a651607920b96b0e9',
+//     baseUrl: 'https://api.openweathermap.org/data/2.5/weather'
+// }
+
 let search_btn = document.querySelector('.Search-btn')
 let input_city = document.querySelector('.inputcity')
 let city = input_city.value;
@@ -15,17 +16,21 @@ function search() {
     console.log(weather_body)
     weather_body.innerHTML =
         `
-    <p>Loading Data please wait</p><p>website created by Navneet kumar</p>
+    <p>Loading Data please wait ...</p><p>website created by Navneet kumar</p>
     `;
-    getWeatherReport(input_city.value)
+    getWeatherReport(input_city.value) 
 }
 //get waether report
 function getWeatherReport(city) {
+    var proxyUrl = 'https://weather.navneet.website/server.php';
+    var apiUrl = proxyUrl + '?city=' + encodeURIComponent(city);
     console.log("loading data please wait.....")
-    fetch(`${weatherApi.baseUrl}?q=${city}&appid=${weatherApi.key}&units=metric`)  // fetch method fetching the data from  base url ...metric is used for unit in celcius......here i am appending the base url to get data by city name .  
+    fetch(apiUrl)  // fetch method fetching the data from  base url ...metric is used for unit in celcius......here i am appending the base url to get data by city name .  
         .then(weather => {   //weather is from api
             return weather.json(); // return data from api in JSON
-        }).then(showWeaterReport);  // calling showweatherreport function 
+        }).then(showWeaterReport).catch(error => {
+            console.error('Error fetching weather:', error);
+          });  // calling showweatherreport function 
     //                                                                          
 }
 function showWeaterReport(weather) {

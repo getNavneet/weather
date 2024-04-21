@@ -1,0 +1,30 @@
+{
+  "coord": { "lon": 80.9167, "lat": 26.85 },
+  "weather": [
+    { "id": 741, "main": "Fog", "description": "fog", "icon": "50d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 17.99,
+    "feels_like": 17.72,
+    "temp_min": 17.99,
+    "temp_max": 17.99,
+    "pressure": 1017,
+    "humidity": 72
+  },
+  "visibility": 800,
+  "wind": { "speed": 1.03, "deg": 0 },
+  "clouds": { "all": 40 },
+  "dt": 1704541492,
+  "sys": {
+    "type": 1,
+    "id": 9176,
+    "country": "IN",
+    "sunrise": 1704504366,
+    "sunset": 1704542224
+  },
+  "timezone": 19800,
+  "id": 1264733,
+  "name": "Lucknow",
+  "cod": 200
+}
